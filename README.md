@@ -1,4 +1,4 @@
-# Comfy Game Streaming Setup Guide
+# Comfy Game Streaming Setup Guide with Sunshine / Moonlight / Playnite
 
 This guide is for those who wants to do a game streaming setup to their TV from a desktop and only play on a controller.
 I've tried to make it as simple as possible to add as many emulators so you don't need to go digging for command line arguments and figure things out.
