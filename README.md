@@ -42,7 +42,7 @@ Image: `C:\Users\YOURNAME\AppData\Local\Playnite\Themes\Fullscreen\Default\Image
 
 # Emulator Configuration
 
-The fastest way to get set up is to install [Retroarch](https://github.com/libretro/RetroArch) and just grab the cores, scan the Retroarch folder with Playnite and it will register the cores as emulators.
+[Retroarch](https://github.com/libretro/RetroArch) allows for quick install of a bunch of different emulators, Just open RetroArch, grab the cores you need, scan the Retroarch folder with Playnite and it will register the cores as emulators.
 
 This allows you to set your settings inside Retroarch one time, and have it work across the cores.
 
@@ -101,8 +101,13 @@ Custom Arguments: `-f -L ".\cores\dolphin_libretro.dll" "{ImagePath}"`
 
 ### Nintendo Switch
 
-I use Ryujinx without overriding arguments.
-Instead, Ive set the config inside Ryujinx.
+I use Ryujinx without overriding arguments in Playnite.
+
+#### Issues
+- There is no binding for exiting Ryujinx, or closing fullscreen with controller (which would let you use mouse simulation to close it).
+- There is a feature request here: https://github.com/Ryujinx/Ryujinx/issues/3725
+- You can use one of these [Playnite recommended ways to closing a game](https://api.playnite.link/docs/manual/gettingStarted/helpAndTroubleshooting/faq.html#how-can-i-close-a-game-or-emulator-with-a-controller) but I personally don't like installing too much stuff.
+- My solution: Don't use fullscreen, use mouse simulator to click the "X".
 
 ### PlayStation 1
 
@@ -115,6 +120,8 @@ Custom Arguments: `-f -L ".\cores\pcsx_rearmed_libretro.dll" "{ImagePath}"`
 Install the [PCSX2]("https://github.com/PCSX2/pcsx2") manually.
 
 Use custom arguments: `-batch -fullscreen -- {ImagePath}`
+
+The batch argument will make PCSX2 close instantly when exiting the game.
 
 Inside the PCSX2 Settings, set a hotkey for "Exit Virtual Machine" to return to Playnite.
 
@@ -136,4 +143,5 @@ You don`t actually need to install this as an emulator inside Playnite.
 3. Inside Playnite, Add a game Manually, import the metadata, and on the Action tab, use Vita3K.exe as path and add an argument `-r PCSE0443`
 
 #### Issues:
-- I can`t find a way to exit using your controller, which makes it unusable for my controller-only setup.
+- I can`t find a way to exit using your controller, which makes it hard to use for my controller-only setup.
+    - This is why I don't use fullscreen arguments, since I rely on mouse emulation (hold Start button) and close it by clicking "X".
