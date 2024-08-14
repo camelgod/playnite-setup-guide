@@ -57,8 +57,7 @@ I don't recommend the PCSX2 core in Retroarch. I use the standalone PCSX2, Vita3
 
 ### PC
 
-Playnite can import your steam library
-Manually import the .exe
+Playnite can import your steam library, or manually import .exe
 
 ### Nintendo NES / Famicon
 
