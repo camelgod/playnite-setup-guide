@@ -5,16 +5,29 @@ I wanted to simply boot up Moonlight and start playing any game I wanted using o
 After lots of configuring and finding command line arguments and such, here is some knowledge that may or may not help you.
 
 ## My Setup
-My setup is as follows:
+
 - [Sunshine](https://github.com/LizardByte/Sunshine)  (on a Windows 11 Desktop, Ethernet)
 - [Moonlight](https://moonlight-stream.org/) (on a Nvidia Shield, Ethernet)
 - [Playnite](https://github.com/JosefNemec/Playnite) (as the gallery / game launcher)
 - Dualshock 4 (connected to the Nvidia Shield over bluetooth)
 
-# 1. Software Configuration
+# Software Configuration
 
-## Add Playnite as an Application inside Sunshine
+## 1. Install Playnite
 
+Download and install Playnite from the [releases page on github](https://github.com/JosefNemec/Playnite/releases)
+
+## 2. Install Moonlight
+
+Depending on your setup, Moonlight has alot of different clients. I use the app from Play Store on the shield - no sideloading or anything.
+
+You can find the links to download on the [Moonlight Website](https://moonlight-stream.org/#)
+
+## 3. Install Sunshine
+
+Install [Sunshine](https://github.com/LizardByte/Sunshine/releases) on your computer.
+
+#### Add Playnite to Sunshine
 To launch Playnite from Sunshine, click "Applications" up top menu and click "Add new".
 
 Fill out the following (everything else is left as is or blank)
@@ -27,7 +40,7 @@ Image: `C:\Users\YOURNAME\AppData\Local\Playnite\Themes\Fullscreen\Default\Image
 
 
 
-# 2. Emulator Configuration
+# Emulator Configuration
 
 The fastest way to get set up is to install [Retroarch](https://github.com/libretro/RetroArch) and just grab the cores, scan the Retroarch folder with Playnite and it will register the cores as emulators.
 
