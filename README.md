@@ -1,6 +1,11 @@
 # Comfy Game Streaming Setup Guide
+
 This guide is for those who wants to do a game streaming setup to their TV from a desktop and only play on a controller.
 I've tried to make it as simple as possible to add as many emulators so you don't need to go digging for command line arguments and figure things out.
+
+
+I wanted to simply boot up Moonlight and start playing any game I wanted using only a DS4 controller.
+After lots of configuring and finding command line arguments and such, here is some knowledge that may or may not help you.
 
 ## My Setup
 My setup is as follows:
@@ -9,7 +14,23 @@ My setup is as follows:
 - Playnite (as the gallery / game launcher)
 
 ## My Goal
-I wanted to simply boot up Moonlight and start playing any game I wanted using only a DS4 controller.
+
+
+# 1. Software Configuration
+
+## Add Playnite as an Application inside Sunshine
+
+To launch Playnite from Sunshine, click "Applications" up top menu and click "Add new".
+
+Fill out the following (everything else is left as is or blank)
+
+Application Name: `Playnite`
+
+Command: `"C:\Users\YOURNAME\AppData\Local\Playnite\Playnite.FullscreenApp.exe" --hidesplashscreen`
+
+Image: `C:\Users\YOURNAME\AppData\Local\Playnite\Themes\Fullscreen\Default\Images\applogo.png`
+
+
 
 # List of Emulators
 
