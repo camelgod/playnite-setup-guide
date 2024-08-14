@@ -150,3 +150,4 @@ You don`t actually need to install this as an emulator inside Playnite.
 #### Issues:
 - I can`t find a way to exit using your controller, which makes it hard to use for my controller-only setup.
     - This is why I don't use fullscreen arguments, since I rely on mouse emulation (hold Start button) and close it by clicking "X".
+- Most games don't work properly in my experience
