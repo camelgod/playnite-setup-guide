@@ -15,9 +15,11 @@ After lots of configuring and finding command line arguments and such, here is s
 
 ## 1. Install Playnite
 
-Download and install Playnite from the [releases page on github](https://github.com/JosefNemec/Playnite/releases)
+Download and install Playnite on the host computer from the [releases page on github](https://github.com/JosefNemec/Playnite/releases)
 
 ## 2. Install Moonlight
+
+Download and install Moonlight on your target (where you want to play the game)
 
 Depending on your setup, Moonlight has alot of different clients. I use the app from Play Store on the shield - no sideloading or anything.
 
@@ -25,7 +27,7 @@ You can find the links to download on the [Moonlight Website](https://moonlight-
 
 ## 3. Install Sunshine
 
-Install [Sunshine](https://github.com/LizardByte/Sunshine/releases) on your computer.
+Install [Sunshine](https://github.com/LizardByte/Sunshine/releases) on your host machine.
 
 #### Add Playnite to Sunshine
 To launch Playnite from Sunshine, click "Applications" up top menu and click "Add new".
