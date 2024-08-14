@@ -1,4 +1,4 @@
-# Comfy Game Streaming Setup Guide with Sunshine / Moonlight / Playnite
+# Game Streaming Setup Guide with Sunshine / Moonlight / Playnite
 
 I wanted to simply boot up Moonlight and start playing any game I wanted using only a DS4 controller. I have no keyboard or mouse connected to my TV.
 
