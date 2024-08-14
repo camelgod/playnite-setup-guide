@@ -123,7 +123,9 @@ Use custom arguments: `-batch -fullscreen -- {ImagePath}`
 
 The batch argument will make PCSX2 close instantly when exiting the game.
 
-Inside the PCSX2 Settings, set a hotkey for "Exit Virtual Machine" to return to Playnite.
+Inside the PCSX2 Settings, I have set my touchpad clickdown (ps4 controller) to launch "Pause Menu", where I can exit the game to return to Playnite.
+
+You can also set the "Exit Virtual Machine" to directly close the game.
 
 ### Sega Dreamcast
 
