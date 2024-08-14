@@ -3,18 +3,15 @@
 This guide is for those who wants to do a game streaming setup to their TV from a desktop and only play on a controller.
 I've tried to make it as simple as possible to add as many emulators so you don't need to go digging for command line arguments and figure things out.
 
-
 I wanted to simply boot up Moonlight and start playing any game I wanted using only a DS4 controller.
 After lots of configuring and finding command line arguments and such, here is some knowledge that may or may not help you.
 
 ## My Setup
 My setup is as follows:
-- Sunshine (on a Windows 11 Desktop, Ethernet)
-- Moonlight (on a Nvidia Shield, Ethernet)
-- Playnite (as the gallery / game launcher)
-
-## My Goal
-
+- [Sunshine](https://github.com/LizardByte/Sunshine)  (on a Windows 11 Desktop, Ethernet)
+- [Moonlight](https://moonlight-stream.org/) (on a Nvidia Shield, Ethernet)
+- [Playnite](https://github.com/JosefNemec/Playnite) (as the gallery / game launcher)
+- Dualshock 4 (connected to the Nvidia Shield over bluetooth)
 
 # 1. Software Configuration
 
@@ -32,13 +29,13 @@ Image: `C:\Users\YOURNAME\AppData\Local\Playnite\Themes\Fullscreen\Default\Image
 
 
 
-# List of Emulators
+# 2. Emulator Configuration
 
-The fastest way to get set up is to install Retroarch and just grab the cores, scan the Retroarch folder with Playnite and it will register the cores as emulators.
+The fastest way to get set up is to install [Retroarch](https://github.com/libretro/RetroArch) and just grab the cores, scan the Retroarch folder with Playnite and it will register the cores as emulators.
 
 This allows you to set your settings inside Retroarch one time, and have it work across the cores.
 
-Go to the Configure Emulators menu, open each retroarch profile, copy the original built-in arguments, and then check "Override Emulator Arguments", and add -f to each one in the beginning.
+Go to the Configure Emulators menu, open each retroarch profile, copy the original built-in arguments, and then check "Override Emulator Arguments", and add -f to each one in the beginning to launch them in fullscreen.
 
 
 ## Systems
@@ -107,6 +104,8 @@ Custom Arguments: `-f -L ".\cores\pcsx_rearmed_libretro.dll" "{ImagePath}"`
 Install the [PCSX2]("https://github.com/PCSX2/pcsx2") manually.
 
 Use custom arguments: `-batch -fullscreen -- {ImagePath}`
+
+Inside the PCSX2 Settings, set a hotkey for "Exit Virtual Machine" to return to Playnite.
 
 ### Sega Dreamcast
 
