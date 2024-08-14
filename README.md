@@ -1,9 +1,7 @@
 # Comfy Game Streaming Setup Guide with Sunshine / Moonlight / Playnite
 
-This guide is for those who wants to do a game streaming setup to their TV from a desktop and only play on a controller.
-I've tried to make it as simple as possible to add as many emulators so you don't need to go digging for command line arguments and figure things out.
+I wanted to simply boot up Moonlight and start playing any game I wanted using only a DS4 controller. I have no keyboard or mouse connected to my TV.
 
-I wanted to simply boot up Moonlight and start playing any game I wanted using only a DS4 controller.
 After lots of configuring and finding command line arguments and such, here is some knowledge that may or may not help you.
 
 ## My Setup
@@ -117,9 +115,12 @@ Use custom arguments `-f -L ".\cores\flycast_libretro.dll" "{ImagePath}"`
 
 #### Set up Vita3k
 When setting up Vita3k for the first time, you can select a folder other than AppData. I recommend using a new folder inside the emulator directory to make it more portable.
+
+You don`t actually need to install this as an emulator inside Playnite.
+
 1. Install the games through Vita3k
 2. Take note of their install folder name (you can also right-click the games inside the emulator and click Open Folder - Application and take note of folder name)
-3. Inside Playnite, Add a game Mnually, set up an Action, use Vita3K.exe as path and an argument `-r PCSE0443`
+3. Inside Playnite, Add a game Manually, import the metadata, and on the Action tab, use Vita3K.exe as path and add an argument `-r PCSE0443`
 
 #### Issues:
-- No good way to exit using your controller
+- I can`t find a way to exit using your controller, which makes it unusable for my controller-only setup.
