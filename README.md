@@ -353,6 +353,22 @@ Options:
 ```
 
 
+## Dolphin
 
+Command Line Options from their wiki: https://wiki.dolphin-emu.org/index.php?title=Help:Contents
 
+```
+-h, --help                                    Show this help message
+-d, --debugger                                Opens the debugger
+-l, --logger                                  Opens the logger
+-e, --exec=<str>                              Loads a specific game file (ELF, DOL, GCM, ISO, WBFS, CISO, GCZ, WAD)
+-n, --nand_title=<str>                        Launch a NAND title
+-b, --batch                                   Exit Dolphin with emulator
+-c, --confirm                                 Set "Confirm on Stop".
+-v, --video_backend=<str>                     Specifies a video backend to use, D3D or OGL.
+-a, --audio_emulation=<str>                   Specified the type of audio to use, HLE or LLE.
+-m, --movie=<str>                             Plays a movie file
+-u, --user=<str>                              Specifies a path to the user directory
+-C, --config=<System>.<Section>.<Key>=<Value> Set a configuration option.
 
+```
