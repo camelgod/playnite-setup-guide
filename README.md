@@ -161,6 +161,12 @@ You don`t actually need to install this as an emulator inside Playnite.
 2. Take note of their install folder name (you can also right-click the games inside the emulator and click Open Folder - Application and take note of folder name)
 3. Inside Playnite, Add a game Manually, import the metadata, and on the Action tab, use Vita3K.exe as path and add an argument `-r PCSE0443`
 
+<img src="https://github.com/user-attachments/assets/f6df76f8-409e-4a94-8915-0a23b9741f77" width="500">
+
+
+
+
+
 #### Issues:
 - I can`t find a way to exit using your controller, which makes it hard to use for my controller-only setup.
     - This is why I don't use fullscreen arguments, since I rely on mouse emulation (hold Start button) and close it by clicking "X".
