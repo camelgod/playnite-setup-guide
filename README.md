@@ -113,10 +113,9 @@ I use Ryujinx without overriding arguments in Playnite.
 
 ### PlayStation 1
 
-I use the RetroArch core **PCSX Rearmed** as described above
+I use the [DuckStation](https://github.com/stenzek/duckstation) emulator.
 
-Custom Arguments: `-f -L ".\cores\pcsx_rearmed_libretro.dll" "{ImagePath}"`
-
+Using the built-in profile from PlayNite `(-batch -fullscreen "{ImagePath}")`
 ### PlayStation 2
 
 Install the [PCSX2]("https://github.com/PCSX2/pcsx2") manually.
