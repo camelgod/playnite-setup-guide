@@ -84,7 +84,8 @@ Custom Arguments: `-f -L ".\cores\desmume_libretro.dll" "{ImagePath}"`
 I use the Lime3DS Emulator.
 
 You have to add it as a custom emulator:
-![image](https://github.com/user-attachments/assets/3cbc1880-a3a2-47af-96f8-fc37321ff182)
+
+<img src="https://github.com/user-attachments/assets/3cbc1880-a3a2-47af-96f8-fc37321ff182" width="500">
 
 You have two options for arguments:
 
