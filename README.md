@@ -191,5 +191,22 @@ Usage: lime3ds-cli.exe [options] <filename>
 
 ```
 
+## Ryujinx
 
+I have tried to decipher them from [here](https://github.com/Ryujinx/Ryujinx/blob/6ce49a2dc7b3e844b7152fa720a0bc30840f7609/src/Ryujinx.UI.Common/Helper/CommandLineState.cs#L29
+). No guarantees!
+
+```
+
+-r, --root-data-dir     Not sure
+-p, --profile           Path of the profile
+-f, --fullscreen        Fullscreen Mode
+-g, --graphics-backend  Change graphics backend
+-i, --application-id    Launch Ryujinx with application ID
+--docked-mode           Override Docked Mode
+--handheld-mode         Override HandHeld Mode
+--hide-cursor           Override Hide Cursor Setting
+--software-gui          Override Hardware Acceleration for GUI
+
+```
 
