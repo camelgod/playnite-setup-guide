@@ -277,7 +277,9 @@ https://wiki.pcsx2.net/Command-line_support
 
 Flycast Command Line Arguments need to be passed through a `-config` flag.
 
-For example `-config  section:key=value`
+For example: `-config  section:key=value`
+
+With real data: `-config window:fullscreen=yes`
 
 For detailed information see the Flycast Wiki:
 https://github.com/TheArcadeStriker/flycast-wiki/wiki/Configuration-files-and-command-line-parameters#command-line-parameters
