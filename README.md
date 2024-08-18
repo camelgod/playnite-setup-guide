@@ -281,3 +281,75 @@ For example `-config  section:key=value`
 
 For detailed information see the Flycast Wiki:
 https://github.com/TheArcadeStriker/flycast-wiki/wiki/Configuration-files-and-command-line-parameters#command-line-parameters
+
+
+## Vita3K Command Line Interface
+
+From the `Vita3K.exe --help` output.
+
+```
+Vita3K Command Line Interface
+Usage: C:\Path\Vita3K.exe [OPTIONS] [content-path]
+
+Positionals:
+  content-path TEXT                   Path to the app with a .vpk/.zip extension or folder of content to install & run
+
+Options:
+  -h,--help                           Print this help message and exit
+  -v,--version                        Print the version string
+[Option Group: Input]
+  Special options for Vita3K
+  Options:
+    --firmware TEXT                     Path to the firmware file (.pup extension) to install
+
+  Input:
+    -z,--console [0]                    Start the emulator in console mode.
+    -Z,--app-args TEXT                  Argument for app, use ', ' to separate arguments.
+    -a,--load-app-list BOOLEAN [0]      Starts the emulator with load app list.
+    -S,--self TEXT [eboot.bin]          Path to the self to run inside Title ID
+    -r,--installed-path TEXT:{PCSA00099,PCSA00152,PCSB00291,PCSB00346,PCSB00404,PCSE00240,PCSE00443,PCSE00508,PCSE00644,PCSG00205}
+                                        Path to the installed app to run
+    -s,--recompile-shader TEXT          Recompile the given PS Vita shader (GXP format) to SPIR_V / GLSL and quit
+    -d,--deleted-id TEXT:{PCSA00099,PCSA00152,PCSB00291,PCSB00346,PCSB00404,PCSE00240,PCSE00443,PCSE00508,PCSE00644,PCSG00205}
+                                        Title ID of installed app to delete
+    --pkg TEXT Needs: --zrif            Path to the app file (.pkg extension) to install
+    --zrif TEXT Needs: --pkg            zrif to decode the app (base64 format)
+[Option Group: Configuration]
+  Modify Vita3K's config.yml file
+  Logging:
+    -A,--archive-log                    Make a duplicate of the log file with TITLE_ID and Game ID as title
+    -l,--log-level INT:INT in [0 - 6]   Logging level:
+                                        TRACE = 0
+                                        DEBUG = 1
+                                        INFO = 2
+                                        WARN = 3
+                                        ERROR = 4
+                                        CRITICAL = 5
+                                        OFF = 6
+    -S,--log-active-shaders             Log Active Shaders
+    -U,--log-uniforms                   Log Uniforms
+
+  Vita Emulation:
+    -B,--backend-renderer TEXT:{OpenGL,Vulkan}
+                                        Renderer backend to use
+    -C,--color-surface-debug            Save color surfaces
+
+  YML:
+    -c,--config-location TEXT           Get a configuration file from a given location. If a filename is given, it must end with ".yml", otherwise it will be assumed to be a directory.
+                                        Default loaded: <Vita3K>/config.yml
+                                        Defaults: <Vita3K>/data/config/default.yml
+    -w{false},--keep-config{false}      Do not modify the configuration file after loading.
+    -f,--load-config                    Load a configuration file. Setting --keep-config with this option preserves the configuration file.
+    -F,--fullscreen                     Start the emulator in fullscreen mode.
+
+  Modules:
+    -m,--lle-modules TEXT ...           Load given (decrypted) OS modules from disk.
+                                        Separate by commas to specify multiple modules. Full path and extension should not be included, the following are assumed: vs0:sys/external/<name>.suprx
+                                        Example: --lle-modules libscemp4,libngs
+
+```
+
+
+
+
+
