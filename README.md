@@ -50,7 +50,9 @@ This allows you to set your settings inside Retroarch one time, and have it work
 
 Go to the Configure Emulators menu, open each retroarch profile, copy the original built-in arguments, and then check "Override Emulator Arguments", and add -f to each one in the beginning to launch them in fullscreen.
 
-I don't recommend the PCSX2 core in Retroarch. I use the standalone PCSX2, Vita3k, and Ryujinx emulators.
+I don't recommend the PCSX2 and PCX core in Retroarch. I use the standalone PCSX2, Vita3k, DuckStation and Ryujinx emulators.
+
+RetroArch has some audio issues for me on Windows 11, so I'm in the process of moving to 100% stand-alone emulator setup.
 
 ## Systems
 
