@@ -81,9 +81,21 @@ Custom Arguments: `-f -L ".\cores\desmume_libretro.dll" "{ImagePath}"`
 
 ### Nintendo 3DS
 
-I use the RetroArch core **Citra** (NOT the 2018) as described above
+I use the Lime3DS Emulator.
 
-Custom Arguments: `-f -L ".\cores\citra_libretro.dll" "{ImagePath}"`
+You have to add it as a custom emulator:
+![image](https://github.com/user-attachments/assets/3cbc1880-a3a2-47af-96f8-fc37321ff182)
+
+You have two options for arguments:
+
+**Windowed mode (GUI):**
+1. Set the path to the `lime3ds-gui.exe`
+2. Set the arguments to `"{ImagePath}"`
+
+**Fullscreen mode (CLI):**
+1. Set the path to the `lime3ds-cli.exe`
+2. Arguments to `-f "{ImagePath}"`
+
 
 ### Nintendo 64
 
@@ -151,3 +163,32 @@ You don`t actually need to install this as an emulator inside Playnite.
 - I can`t find a way to exit using your controller, which makes it hard to use for my controller-only setup.
     - This is why I don't use fullscreen arguments, since I rely on mouse emulation (hold Start button) and close it by clicking "X".
 - Most games don't work properly in my experience
+
+
+
+# List of emulator command line arguments
+
+For some reason its really difficult to find full documentation of arguments for emulators.
+
+## Lime3DS / Citra
+I use Lime3DS, which is based on Citra.
+I find the command line arguments to be the same.
+
+From `lime3ds-cli.exe --help`:
+```
+Usage: lime3ds-cli.exe [options] <filename>
+-g, --gdbport=NUMBER Enable gdb stub on port NUMBER
+-i, --install=FILE    Installs a specified CIA file
+-m, --multiplayer=nick:password@address:port Nickname, password, address and port for multiplayer
+-r, --movie-record=[file]  Record a movie (game inputs) to the given file
+-a, --movie-record-author=AUTHOR Sets the author of the movie to be recorded
+-p, --movie-play=[file]    Playback the movie (game inputs) from the given file
+-d, --dump-video=[file]    Dumps audio and video to the given video file
+-f, --fullscreen     Start in fullscreen mode
+-h, --help           Display this help and exit
+-v, --version        Output version information and exit
+
+```
+
+
+
