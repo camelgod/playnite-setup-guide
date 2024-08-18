@@ -115,7 +115,7 @@ I use Ryujinx without overriding arguments in Playnite.
 
 I use the [DuckStation](https://github.com/stenzek/duckstation) emulator.
 
-Using the built-in profile from PlayNite `(-batch -fullscreen "{ImagePath}")`
+Using the built-in profile from PlayNite (`-batch -fullscreen "{ImagePath}"`)
 ### PlayStation 2
 
 Install the [PCSX2]("https://github.com/PCSX2/pcsx2") manually.
