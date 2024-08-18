@@ -169,7 +169,7 @@ You don`t actually need to install this as an emulator inside Playnite.
 
 # List of emulator command line arguments
 
-For some reason its really difficult to find full documentation of arguments for emulators.
+For some reason its really difficult to find full documentation of arguments for emulators. I've tried to collect them here.
 
 ## Lime3DS / Citra
 I use Lime3DS, which is based on Citra.
@@ -210,3 +210,74 @@ I have tried to decipher them from [here](https://github.com/Ryujinx/Ryujinx/blo
 
 ```
 
+## DuckStation
+Taken from the following link:
+
+https://github.com/stenzek/duckstation/wiki/Command-Line-Arguments
+
+```
+Usage: duckstation-qt-x64-ReleaseLTCG.exe [parameters] [--] [boot filename]
+
+  -help: Displays this information and exits.
+  -version: Displays version information and exits.
+  -batch: Enables batch mode (exits after powering off).
+  -fastboot: Force fast boot for provided filename.
+  -slowboot: Force slow boot for provided filename.
+  -resume: Load resume save state. If a boot filename is provided,
+    that game's resume state will be loaded, otherwise the most
+    recent resume save state will be loaded.
+  -state <index>: Loads specified save state by index. If a boot
+    filename is provided, a per-game state will be loaded, otherwise
+    a global state will be loaded.
+  -statefile <filename>: Loads state from the specified filename.
+    No boot filename is required with this option.
+  -fullscreen: Enters fullscreen mode immediately after starting.
+  -nofullscreen: Prevents fullscreen mode from triggering if enabled.
+  -portable: Forces "portable mode", data in same directory.
+  -nocontroller: Prevents the emulator from polling for controllers.
+                 Try this option if you're having difficulties starting
+                 the emulator.
+  -settings <filename>: Loads a custom settings configuration from the
+    specified filename. Default settings applied if file not found.
+  --: Signals that no more arguments will follow and the remaining
+    parameters make up the filename. Use when the filename contains
+    spaces or starts with a dash.
+
+```
+
+
+## PCSX2 Command-Line Arguments
+
+From here:
+
+https://wiki.pcsx2.net/Command-line_support
+
+```
+ -help: Displays this information and exits.
+ -version: Displays version information and exits.
+ -batch: Enables batch mode (exits after shutting down).
+ -nogui: Hides main window while running (implies batch mode).
+ -elf <file>: Overrides the boot ELF with the specified filename.
+ -disc <path>: Uses the specified host DVD drive as a source.
+ -bios: Starts the BIOS (System Menu/OSDSYS).
+ -fastboot: Force fast boot for provided filename.
+ -slowboot: Force slow boot for provided filename.
+ -state <index>: Loads specified save state by index.
+ -statefile <filename>: Loads state from the specified filename.
+ -fullscreen: Enters fullscreen mode immediately after starting.
+ -nofullscreen: Prevents fullscreen mode from triggering if enabled.
+ -bigpicture: Forces PCSX2 to use the Big Picture mode (useful for controller-only and couch play).
+ -gameargs="-arg1 -arg2": Supplies launch arguments to the game itself ("-arg1" and "-arg2" will be passed to the game in this example).
+ --: Signals that no more arguments will follow and the remaining
+   parameters make up the filename. Use when the filename contains
+   spaces or starts with a dash.
+```
+
+## Flycast
+
+Flycast Command Line Arguments need to be passed through a `-config` flag.
+
+For example `-config  section:key=value`
+
+For detailed information see the Flycast Wiki:
+https://github.com/TheArcadeStriker/flycast-wiki/wiki/Configuration-files-and-command-line-parameters#command-line-parameters
