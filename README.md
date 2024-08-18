@@ -97,6 +97,7 @@ You have two options for arguments:
 1. Set the path to the `lime3ds-cli.exe`
 2. Arguments to `-f "{ImagePath}"`
 
+I personally use the GUI executable and just set the Fullscreen. It will keep being fullscreen for future launches. I couldn't get the CLI version to launch without errors.
 
 ### Nintendo 64
 
