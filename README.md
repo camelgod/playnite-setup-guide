@@ -12,6 +12,9 @@ After lots of configuring and finding command line arguments and such, here is s
 - Dualshock 4 (connected to the Nvidia Shield over bluetooth
 - Switch Pro Controller (connected to the Nvidia Shield over bluetooth, used for Player 2 in co-op games)
 
+## TODOS
+
+I still havent figured out a way to consistently exit out of emulators. This will probably be updated in the future.
 
 # Software Configuration
 
