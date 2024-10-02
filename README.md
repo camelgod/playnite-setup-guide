@@ -9,7 +9,9 @@ After lots of configuring and finding command line arguments and such, here is s
 - [Sunshine](https://github.com/LizardByte/Sunshine)  (on a Windows 11 Desktop, Ethernet)
 - [Moonlight](https://moonlight-stream.org/) (on a Nvidia Shield, Ethernet)
 - [Playnite](https://github.com/JosefNemec/Playnite) (as the gallery / game launcher)
-- Dualshock 4 (connected to the Nvidia Shield over bluetooth)
+- Dualshock 4 (connected to the Nvidia Shield over bluetooth
+- Switch Pro Controller (connected to the Nvidia Shield over bluetooth, used for Player 2 in co-op games)
+
 
 # Software Configuration
 
@@ -44,15 +46,21 @@ Image: `C:\Users\YOURNAME\AppData\Local\Playnite\Themes\Fullscreen\Default\Image
 
 # Emulator Configuration
 
+## Regarding RetroArch
 [Retroarch](https://github.com/libretro/RetroArch) allows for quick install of a bunch of different emulators, Just open RetroArch, grab the cores you need, scan the Retroarch folder with Playnite and it will register the cores as emulators.
 
 This allows you to set your settings inside Retroarch one time, and have it work across the cores.
 
 Go to the Configure Emulators menu, open each retroarch profile, copy the original built-in arguments, and then check "Override Emulator Arguments", and add -f to each one in the beginning to launch them in fullscreen.
 
-I don't recommend the PCSX2 and PCX core in Retroarch. I use the standalone PCSX2, Vita3k, DuckStation and Ryujinx emulators.
+For example: `-f -L ".\cores\desmume_libretro.dll" "{ImagePath}"`
 
-RetroArch has some audio issues for me on Windows 11, so I'm in the process of moving to 100% stand-alone emulator setup.
+I have personally decided to move away from RetroArch, since many of the emulator cores are out of date or behave unexpectedly in regards to audio and video outputs. If it works fine for you its still a good pick for ease-of-use not having to set up a bunch of emulators manually.
+
+## Manual Emulators
+
+I have decided to move away from RetroArch, and set up everything manually. Below you will find a list of all the emulators I use and their respective launch arguments.
+
 
 ## Systems
 
@@ -63,25 +71,35 @@ Playnite can import your steam library, or manually import .exe
 
 ### Nintendo NES / Famicon
 
-I use the RetroArch core **Nestopia** as described above.
+I use the **Mesen** emulator with the built-in arguments:
 
-Custom Arguments: `-f -L ".\cores\nestopia_libretro.dll" "{ImagePath}"`
+Built-in Arguments: `/fullscreen "{ImagePath}"`
 
 ### Nintendo SNES
 
-I use the RetroArch core **snes9x** as described above.
+I use the **snes9x** emulator with the built-in arguments:
 
-Custom Arguments: `-f -L ".\cores\snes9x_libretro.dll" "{ImagePath}"`
+Built-in Arguments: `"{ImagePath}" -fullscreen`
 
 ### Nintendo DS
 
-I use the RetroArch core **DeSmuME** as described above.
+I use the **DeSmuME** emulator with the built-in arguments.
 
-Custom Arguments: `-f -L ".\cores\desmume_libretro.dll" "{ImagePath}"`
+I had a very hard time getting DeSmuMe fullscreen without using complicated AutoHotKey setups.
+However I have a nifty trick up my sleeve using Playnite script to trigger ALT+Enter:
+
+Go to DeSmuME in Emulator Configs and go to the "Scripts" tab. Execute after emulator is started paste the following:
+
+`[System.Windows.Forms.SendKeys]::SendWait('%{ENTER}')`
+
+In this case, `%` means hold ALT and `{ENTER}` is the Enter key.
+![image](https://github.com/user-attachments/assets/75f619d5-371b-40e8-819c-4877384647ee)
+
+This will open the emulator and then enter into fullscreen.
 
 ### Nintendo 3DS
 
-I use the Lime3DS Emulator.
+I use the **Lime3DS* Emulator.
 
 You have to add it as a custom emulator:
 
@@ -101,21 +119,24 @@ I personally use the GUI executable and just set the Fullscreen. It will keep be
 
 ### Nintendo 64
 
-I use the RetroArch core **Mupen64Plus-next** as described above.
+I use the **Simple64** as described above.
 
-Custom Arguments: `-f -L ".\cores\mupen64plus_next_libretro.dll" "{ImagePath}"`
+Built-in Arguments: `--nogui "{ImagePath}"`
+
+To get fullscreen on launch, there is no command-line and the Alt+Enter Script trick does not work for me.
+You need to go and manually open Simple64, go to the option and enable fullscreen from there. Once enabled, it sticks on all future launches.
 
 ### Nintendo Gamecube
 
-I use the RetroArch core **Dolphin** as described above.
+I use the **Dolphin** emulator with the default Built-in arguments.
 
-Custom Arguments: `-f -L ".\cores\dolphin_libretro.dll" "{ImagePath}"`
+Easiest way to launch with fullscreen is to open Dolphin and enable it.
 
 ### Nintendo Wii
 
-I use the RetroArch core **Dolphin** as described above.
+I use the **Dolphin** emulator with the default Built-in arguments.
 
-Custom Arguments: `-f -L ".\cores\dolphin_libretro.dll" "{ImagePath}"`
+Easiest way to launch with fullscreen is to open Dolphin and enable it.
 
 ### Nintendo Switch
 
@@ -123,9 +144,9 @@ I use Ryujinx without overriding arguments in Playnite.
 
 #### Issues
 - There is no binding for exiting Ryujinx, or closing fullscreen with controller (which would let you use mouse simulation to close it).
-- There is a feature request here: https://github.com/Ryujinx/Ryujinx/issues/3725
+- There is a feature request here: https://github.com/Ryujinx/Ryujinx/issues/3725 (It seems Ryujinx has been taken down)
 - You can use one of these [Playnite recommended ways to closing a game](https://api.playnite.link/docs/manual/gettingStarted/helpAndTroubleshooting/faq.html#how-can-i-close-a-game-or-emulator-with-a-controller) but I personally don't like installing too much stuff.
-- My solution: Don't use fullscreen, use mouse simulator to click the "X".
+- My solution: Don't use fullscreen, use mouse simulator to click the good old "X".
 
 ### PlayStation 1
 
@@ -146,9 +167,9 @@ You can also set the "Exit Virtual Machine" to directly close the game.
 
 ### Sega Dreamcast
 
-I use the RetroArch core **Flycast**
+I use the **Flycast** Emulator with built-in launch arguments.
 
-Use custom arguments `-f -L ".\cores\flycast_libretro.dll" "{ImagePath}"`
+Easiest way is to open it, enable full-screen and it will stick in future sessions.
 
 ### PS Vita:
 
@@ -197,6 +218,13 @@ Usage: lime3ds-cli.exe [options] <filename>
 -v, --version        Output version information and exit
 
 ```
+
+## Simple64
+
+Here are the command lines for Simple64-gui:
+![image](https://github.com/user-attachments/assets/eaad9a07-8273-4ae9-b334-93b342f1abd8)
+
+
 
 ## Ryujinx
 
