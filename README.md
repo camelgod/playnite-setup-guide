@@ -100,6 +100,8 @@ In this case, `%` means hold ALT and `{ENTER}` is the Enter key.
 
 This will open the emulator and then enter into fullscreen.
 
+Here is a [full list of C# Keys you can use.](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.sendkeys.send?view=windowsdesktop-8.0#remarks)
+
 ### Nintendo 3DS
 
 I use the **Lime3DS* Emulator.
